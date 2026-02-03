@@ -20,5 +20,24 @@ public class main{
 
         // Probar traducción 
         System.out.println("Traduccion de 'dog': " + traductor.traducir("dog"));
+    
+        // Modificar entrada.
+        traductor.modificarUnaClaseExistente("car", "automovil");
+        System.out.println("Nueva traducción dde 'car': " + traductor.traducir("car"));
+
+        // Borrar entrada
+        traductor.borrarEntrada("milk");
+
+        // Mostrar palabras extranjeras 
+        System.out.println("Palabras extrajeras: ");
+        for (String palabra : traductor.palabrasExtranjeras()) {
+            System.out.println(palabra);
+        }
+
+        // Mostrar palabras españolas
+        System.out.println("Palabras españolas:");
+        for (String palabra : traductor.palabrasEspañolas()) {
+            System.out.println(palabra);
+        }
     }
 }
